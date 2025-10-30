@@ -19,7 +19,7 @@ All commands are run from the root of the project, from a terminal:
 
 ## Deploying to Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/astro-platform-starter)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rvbabilonia/te-kauwhata-nearbynest)
 
 ## Developing Locally
 
