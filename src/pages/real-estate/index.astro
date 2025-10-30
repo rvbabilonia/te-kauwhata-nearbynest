@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Carousel from '../../components/Carousel.astro';
+
+const items = [
+    {
+        type: 'tile',
+        title: 'Bayleys',
+        description: "Bayleys Te Kauwhata",
+        imageUrl: 'https://cms-cdn.bayleys.co.nz/00000000-0000-0000-0000-000000000000/43eb3778-6e65-413c-ae30-2cd1c7da2280/d39395db-97cc-47c1-a1f1-cd1d22f4a4ce/160_258.jpg',
+        link: 'https://waikato.bayleys.co.nz/'
+    },
+    {
+        type: 'facebook',
+        pageId: 'FusionTeKauwhata'
+    },
+    {
+        type: 'facebook',
+        pageId: 'remaxtekauwhata'
+    }
+] as const;
+---
+
+<Layout title="Te Kauwhata NearbyNest">
+    <h1 class="mb-10">Real Estate</h1>
+    <main>
+        <Carousel items={items} />
+    </main>
+</Layout>

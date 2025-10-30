@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Carousel from '../../components/Carousel.astro';
+
+const items = [
+    {
+        type: 'tile',
+        title: 'Best Start Lakeside Village',
+        description: 'Best Start Lakeside Village',
+        imageUrl: 'https://best-start.org/images/logo3.png',
+        link: 'https://best-start.org/centres/beststart-lakeside-village'
+    },
+    {
+        type: 'tile',
+        title: 'Busy Bees Te Kauwhata',
+        description: "Busy Bees Te Kauwhata",
+        imageUrl: '/path/to/image.jpg',
+        link: 'https://busybees.org.nz/tekauwhata'
+    }
+] as const;
+---
+
+<Layout title="Te Kauwhata NearbyNest">
+    <h1 class="mb-10">Education & Training</h1>
+    <main>
+        <Carousel items={items} />
+    </main>
+</Layout>

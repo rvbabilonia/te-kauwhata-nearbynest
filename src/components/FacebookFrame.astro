@@ -1,0 +1,16 @@
+---
+interface Props {
+    pageId: string;
+}
+
+const { pageId } = Astro.props;
+---
+
+<div class="w-full h-[450px] bg-white p-4 flex items-center justify-center">
+    <iframe
+        src={`https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/${pageId}&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true`}
+        class="w-full h-[400px] border-none overflow-hidden"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        sandbox="allow-forms allow-scripts allow-same-origin">
+    </iframe>
+</div>

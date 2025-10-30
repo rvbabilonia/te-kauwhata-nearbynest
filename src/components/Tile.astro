@@ -1,0 +1,23 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    imageUrl?: string;
+    link?: string;
+}
+
+const { title, description, imageUrl, link } = Astro.props;
+---
+
+<div class="w-full h-[400px] bg-white p-6 flex flex-col items-center justify-center text-center">
+    {imageUrl && <img src={imageUrl} alt={title} class="w-64 h-32 object-contain rounded-full mb-4" />}
+    <h3 class="text-xl font-bold mb-2">{title}</h3>
+    <p class="text-gray-600">{description}</p>
+    {
+        link && (
+            <a href={link} class="text-blue-500">
+                Learn More
+            </a>
+        )
+    }
+</div>

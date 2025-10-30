@@ -1,6 +1,6 @@
-# Astro on Netlify Platform Starter
+# Te Kauwhata NearbyNest
 
-[Live Demo](https://astro-platform-starter.netlify.app/)
+[Live Demo](https://te-kauwhata-nearbynest.netlify.app/)
 
 A modern starter based on Astro.js, Tailwind, daisyUI, and [Netlify Core Primitives](https://docs.netlify.com/core/overview/#develop) (Edge Functions, Image CDN, Blob Store).
 

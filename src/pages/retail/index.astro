@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Carousel from '../../components/Carousel.astro';
+
+const items = [
+    {
+        type: 'facebook',
+        pageId: '61569378687684', // Farm Fresh
+    },
+    {
+        type: 'facebook',
+        pageId: '61563971986778', // Save-a-lot Supermarket
+    },
+] as const;
+---
+
+<Layout title="Te Kauwhata NearbyNest">
+    <h1 class="mb-10">Retail & Wholesale Trade</h1>
+    <main>
+        <Carousel items={items} />
+    </main>
+</Layout>

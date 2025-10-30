@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Carousel from '../../components/Carousel.astro';
+
+const items = [
+    // {
+    //     type: 'facebook',
+    //     pageId: '61561794757751', // The Lunch Lady
+    // },
+    {
+        type: 'facebook',
+        pageId: 'uniquefusionltd', // Unique Fusion
+    },
+    {
+        type: 'facebook',
+        pageId: '61570835041855', // Lakeside Cafe
+    },
+    {
+        type: 'facebook',
+        pageId: '61558588630515', // Flippin Burger
+    },
+] as const;
+---
+
+<Layout title="Te Kauwhata NearbyNest">
+    <h1 class="mb-10">Food Services</h1>
+    <main>
+        <Carousel items={items} />
+    </main>
+</Layout>

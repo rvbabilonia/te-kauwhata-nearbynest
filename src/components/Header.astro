@@ -1,22 +1,36 @@
 ---
-import Logo from '../components/Logo.astro';
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.webp';
 
 const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' }
+    { linkText: 'Food Services', href: '/food-services' },
+    { linkText: 'Professional Services', href: '/professional-services' },
+    { linkText: 'Retail & Wholesale Trade', href: '/retail' },
+    { linkText: 'Information Technology', href: '/it' },
+    { linkText: 'Education & Training', href: '/education' },
+    { linkText: 'Healthcare & Wellness', href: '/healthcare' },
+    { linkText: 'Agriculture, Forestry & Fishing', href: '/agriculture' },
+    { linkText: 'Manufacturing & Production', href: '/manufacturing' },
+    { linkText: 'Arts, Crafts, Entertainment & Media', href: '/arts' },
+    { linkText: 'Logistics & Transportation', href: '/logistics' },
+    { linkText: 'Hospitality & Tourism', href: '/hospitality' },
+    { linkText: 'Real Estate', href: '/real-estate' },
+    { linkText: 'Charity', href: '/charity' },
+    { linkText: 'Community', href: '/community' },
+    { linkText: 'Events', href: '/events' },
+    { linkText: 'News', href: '/news' },
+    { linkText: 'Jobs', href: '/jobs' }
+    
 ];
 ---
 
 <nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
     <a href="/">
-        <Logo />
+         <Image src={logo} alt="Logo" class="border-2 border-white rounded-lg" width={50} height={50} />
     </a>
     {
         !!navItems?.length && (
-            <ul class="flex flex-wrap gap-x-4 gap-y-1">
+            <ul class="flex flex-wrap gap-x-1 gap-y-1">
                 {navItems.map((item) => (
                     <li>
                         <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
