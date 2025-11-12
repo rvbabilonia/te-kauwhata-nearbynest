@@ -5,13 +5,17 @@ import Carousel from '../../components/Carousel.astro';
 const items = [
     {
         type: 'facebook',
-        pageId: 'saltandstonetk' // Salt & Stone
+        pageId: '61552871468788' // Head of the Pack
+    },
+    {
+        type: 'facebook',
+        pageId: '61562337871581' // Farm Tails
     }
 ] as const;
 ---
 
 <Layout title="Te Kauwhata NearbyNest">
-    <h1 class="mb-10">Healthcare & Wellness</h1>
+    <h1 class="mb-10">Pets & Veterinary Services</h1>
     <main>
         <Carousel items={items} />
     </main>

@@ -3,7 +3,34 @@
 ---
 
 <footer class="pt-16 pb-12 sm:pt-24 sm:pb-16">
+    <div id="visitor-counter" class="text-sm opacity-70 mb-4 hidden">
+        <span id="visitor-count">...</span> unique visitors this month
+    </div>
     <p class="text-sm">
         <a href="mailto:rvbabilonia+nearbynest@gmail.com" class="decoration-dashed text-primary underline-offset-8"> Contact Us </a>
     </p>
 </footer>
+
+<script>
+    // Fetch and display visitor count
+    async function updateVisitorCount() {
+        try {
+            const response = await fetch('/api/visitor-count');
+            if (response.ok) {
+                const data = await response.json();
+                const countElement = document.getElementById('visitor-count');
+                const containerElement = document.getElementById('visitor-counter');
+
+                if (countElement && containerElement) {
+                    countElement.textContent = data.count.toLocaleString();
+                    containerElement.classList.remove('hidden');
+                }
+            }
+        } catch (error) {
+            console.error('Failed to fetch visitor count:', error);
+        }
+    }
+
+    // Call on page load
+    updateVisitorCount();
+</script>

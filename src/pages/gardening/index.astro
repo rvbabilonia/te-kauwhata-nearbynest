@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Carousel from '../../components/Carousel.astro';
+
+const items = [
+    {
+        type: 'tile',
+        title: 'BlinkPay',
+        description: "BlinkPay is New Zealand's first purpose-built open banking payment gateway, wholly owned by Bank of New Zealand",
+        imageUrl: 'https://www.blinkpay.co.nz/images/BlinkPay_Logo_RGB_1.webp',
+        link: 'https://www.blinkpay.co.nz'
+    },
+    {
+        type: 'facebook',
+        pageId: 'blinkpaynz'
+    }
+] as const;
+---
+
+<Layout title="Te Kauwhata NearbyNest">
+    <h1 class="mb-10">Gardening</h1>
+    <main>
+        <Carousel items={items} />
+    </main>
+</Layout>
